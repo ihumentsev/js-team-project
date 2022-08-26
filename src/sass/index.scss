@@ -1,2 +1,11 @@
+// utils
+@import './utils/variables';
+// base
 @import './common';
-@import './example';
+@import './container';
+// layouts
+@import './layouts/header';
+@import './layouts/cotnent-container';
+@import './layouts/pagination';
+@import './layouts/footer';
+@import './layouts/modal';
