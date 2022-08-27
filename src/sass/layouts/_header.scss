@@ -81,26 +81,32 @@ header {
     //   background-image: linear-gradient(136.07deg, rgba(196, 196, 196, 0.03) 10.75%, rgba(196, 196, 196, 0) 92.33%);
     backdrop-filter: blur(30px);
     border-bottom-right-radius: 100%;
+    padding-top: 19px;
+      padding-left: 20px;
     @include media(tablet) {
       width: 180px;
       height: 180px;
+      padding-top: 23px;
+      padding-left: 32px;
     }
     @include media(desktop) {
       width: 230px;
       height: 230px;
+      padding-top: 41px;
+      padding-left: 16px;
     }
   }
-  .logo__link {
-    display: inline-flex;
-    color: black;
-  }
+//   .logo__link {
+//     display: inline-flex;
+//     color: black;
+//   }
   .logo__icon {
     display: inline-block;
     stroke-width: 1px;
-    stroke: black;
+
     width: 60px;
     height: 25px;
-    fill: black;
+    fill: var(--main-txt-clr);
     @include media(tablet) {
       width: 100px;
       height: 29px;
@@ -110,10 +116,10 @@ header {
       height: 70px;
     }
   }
-  .searching__icon-s{
-    width: 60px;
-    height: 25px;
-  }
+//   .searching__icon-s{
+//     width: 60px;
+//     height: 25px;
+//   }
   .header__title {
     text-align: center;
     color: var(--accent-clr);
