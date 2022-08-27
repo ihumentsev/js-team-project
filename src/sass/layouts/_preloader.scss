@@ -4,14 +4,18 @@
     top: 50%;  
     left: 37%; 
     background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #2f303a;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-color: #2f303a;
     // transform: translate(-50%, -50%);
     // width: 100%;
     // height: 100%;
     z-index: 9999;
+}
+.wrapper.ishidden{
+    display: none;
+    visibility: hidden;
 }
 
 .line{
@@ -51,7 +55,7 @@
 .line1{
     margin-left: 0px;
     background-color: #2410CB;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
 }
 .line1 > span{
@@ -62,29 +66,29 @@
 }
 .line1 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
 }
 .line1 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
 }
 .line1 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
 }
 .line1 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    // //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
 }
 
 .line2{
     margin-left: 35px;
     background-color: #852DF4;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    // //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
 }
 .line2 > span{
@@ -95,29 +99,29 @@
 }
 .line2 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
 }
 .line2 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
 }
 .line2 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
 }
 .line2 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
 }
 
 .line3{
     margin-left: 70px;
     background-color: #F42DF1;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
 }
 .line3 > span{
@@ -128,29 +132,29 @@
 }
 .line3 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
 }
 .line3 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
 }
 .line3 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
 }
 .line3 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
 }
 
 .line4{
     margin-left: 105px;
     background-color: #F91396;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
 }
 .line4 > span{
@@ -161,29 +165,29 @@
 }
 .line4 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
 }
 .line4 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
 }
 .line4 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
 }
 .line4 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
 }
 
 .line5{
     margin-left: 140px;
     background-color: #D4141E;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
 }
 .line5 > span{
@@ -194,29 +198,29 @@
 }
 .line5 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
 }
 .line5 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
 }
 .line5 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
 }
 .line5 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
 }
 
 .line6{
     margin-left: 175px;
     background-color: #FC7E48;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
 }
 .line6 > span{
@@ -227,29 +231,29 @@
 }
 .line6 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
 }
 .line6 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
 }
 .line6 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
 }
 .line6 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
 }
 
 .line7{
     margin-left: 210px;
     background-color: #EDEB29;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
 }
 .line7 > span{
@@ -260,29 +264,29 @@
 }
 .line7 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
 }
 .line7 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
 }
 .line7 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
 }
 .line7 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
 }
 
 .line8{
     margin-left: 245px;
     background-color: #ACED29;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
 }
 .line8 > span{
@@ -293,29 +297,29 @@
 }
 .line8 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
 }
 .line8 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
 }
 .line8 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
 }
 .line8 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
 }
 
 .line9{
     margin-left: 280px;
     background-color: #4EF02B;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
 }
 .line9 > span{
@@ -326,29 +330,29 @@
 }
 .line9 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
 }
 .line9 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
 }
 .line9 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
 }
 .line9 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
 }
 
 .line10{
     margin-left: 315px;
     background-color: #38E790;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
 }
 .line10 > span{
@@ -359,29 +363,29 @@
 }
 .line10 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
 }
 .line10 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
 }
 .line10 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
 }
 .line10 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
 }
 
 .line11{
     margin-left: 350px;
     background-color: #25EACC;
-    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    //-webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
     animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
 }
 .line11 > span{
@@ -392,23 +396,23 @@
 }
 .line11 > .dotted > .dot-top{
     top: 0px;
-    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    //-webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
     animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
 
 }
 .line11 > .dotted > .dot-bottom{
     bottom: 0px;
-    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    //-webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
     animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
 }
 .line11 > .dotted > .dot-middle-top{
     top: 0px;
-    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    //-webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
     animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
 }
 .line11 > .dotted > .dot-middle-bottom{
     bottom: 0px;
-    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    //-webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
     animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
 }
 
@@ -488,6 +492,3 @@
     100%{bottom: 0px;}
 }
 
-.ishidden{
-    display: none;
-}
