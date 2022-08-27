@@ -1,9 +1,6 @@
 const wrapperPreloader = document.querySelector('.wrapper')
-function preloader (){
+export default function preloader (){
     setTimeout(()=>{
-
-        wrapperPreloader.style.display = 'none';
-
+        wrapperPreloader.classList.add('ishidden') 
     }, 1500)
 }
-preloader ();
