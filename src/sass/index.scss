@@ -2,10 +2,12 @@
 @import './base/fonts';
 // utils
 @import './utils/variables';
+// vendors
+@import './vendors/mixin-media';
 // base
 @import './base/common';
-@import './base/mixins';
 @import './base/container';
+@import './base/background';
 // layouts
 @import './layouts/header';
 @import './layouts/cotnent-container';

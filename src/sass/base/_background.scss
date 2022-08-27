@@ -1,0 +1,26 @@
+body {
+  background-image: url(../images/bgc/body_s.jpg);
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  @include media(retina) {
+    background-image: url(../images/bgc/body_s@2x.jpg);
+  }
+
+  @include media(tablet) {
+    background-image: url(../images/bgc/body_m.jpg);
+
+    @include media(retina) {
+      background-image: url(../images/bgc/body_m@2x.jpg);
+    }
+  }
+
+  @include media(desktop) {
+    background-image: url(../images/bgc/body_l.jpg);
+
+    @include media(retina) {
+      background-image: url(../images/bgc/body_l@2x.jpg);
+    }
+  }
+}
