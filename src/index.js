@@ -1,27 +1,35 @@
-import preloader from './js/preloader.js'
+import preloader from './js/preloader.js';
 import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
+import { renderPagination } from './js/pagination.js';
 //////////////////////////
 const searchingInput = document.querySelector('.start-searching');
 const countryInput = document.querySelector('.choose-country');
 const listItemEl = document.querySelector('.event-list');
 const DEBOUNCE_DELAY = 400;
 
+let eventSearch;
+let totalPages;
+
 searchingInput.addEventListener(
   'input',
   debounce(onInputClick, DEBOUNCE_DELAY)
 );
 
-async function onInputClick(event) {
-  const eventSearch = event.target.value;
+function onInputClick(event) {
+  eventSearch = event.target.value;
   listItemEl.innerHTML = '';
   if (eventSearch === '') {
     return;
   }
 
-  const response = await getEvens(`${eventSearch}`, '');
+  renderEvents();
+}
+
+async function renderEvents(page = 0) {
+  const response = await getEvens(`${eventSearch}`, '', page);
 
   try {
     if (response.page.totalPages === 0) {
@@ -38,7 +46,11 @@ async function onInputClick(event) {
       const listItem = response._embedded.events
         .map(item => temlateCards(item))
         .join('');
-      listItemEl.insertAdjacentHTML('beforeend', listItem);
+      listItemEl.innerHTML = listItem;
+
+      totalPages =
+        response.page.totalPages > 50 ? 50 : response.page.totalPages;
+      renderPagination(totalPages, renderEvents);
     }
   } catch (error) {
     console.log(error);

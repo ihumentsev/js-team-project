@@ -12,6 +12,7 @@
     height: 30px;
     border-radius: 10px 0px;
     color: var(--main-txt-clr);
+    cursor: pointer;
 
     &_active {
       border: 1px solid var(--accent-clr);
