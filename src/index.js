@@ -5,6 +5,7 @@ import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 import { renderPagination } from './js/pagination.js';
 //////////////////////////
+preloader ();
 const searchingInput = document.querySelector('.start-searching');
 const countryInput = document.querySelector('.choose-country');
 const listItemEl = document.querySelector('.event-list');
