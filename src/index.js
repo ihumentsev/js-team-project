@@ -1,3 +1,4 @@
+import preloader from './js/preloader.js'
 import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
