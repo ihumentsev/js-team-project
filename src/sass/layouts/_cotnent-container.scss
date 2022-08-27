@@ -1,52 +1,101 @@
 .events-section {
   display: flex;
-  gap: 40px 32px;
+  gap: 32px 20px;
   flex-wrap: wrap;
+
+  @include media(tablet) {
+    gap: 40px 32px;
+  }
 }
 
 .event-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 288px;
-  font-size: 16px;
+  width: 130px;
+  font-size: 14px;
   text-align: center;
   gap: 8px;
   padding-top: 20px;
+
+  @include media(tablet) {
+    width: 152px;
+    font-size: 16px;
+  }
+
+  @include media(desktop) {
+    width: 288px;
+  }
 
   &:before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 227px;
-    height: 212px;
+    width: 102px;
+    height: 95px;
     border: 1px solid var(--accent-clr);
     opacity: 0.3;
     border-radius: 50px 0px;
     z-index: -1;
+
+    @include media(tablet) {
+      width: 120px;
+      height: 112px;
+    }
+
+    @include media(desktop) {
+      width: 227px;
+      height: 212px;
+    }
   }
 
-  .event-card__image {
-    width: 267px;
-    height: 337px;
+  &__image {
+    width: 120px;
+    height: 151px;
     border-radius: 50px 0px;
+
+    @include media(tablet) {
+      width: 141px;
+      height: 178px;
+    }
+
+    @include media(desktop) {
+      width: 267px;
+      height: 337px;
+    }
   }
 
-  .event-card__title {
+  &__title {
     font-weight: 700;
     color: var(--accent-clr);
   }
 
-  .event-card__date {
+  &__date {
     font-weight: 400;
     color: var(--main-txt-clr);
   }
 
-  .event-card__location {
-    font-style: 14px;
+  &__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     color: var(--main-txt-clr);
+
+    &:before {
+      content: '';
+      width: 8px;
+      height: 11px;
+      background: url('../images/svg/location_icon.svg') center no-repeat;
+      background-size: cover;
+      margin-right: 5px;
+    }
+
+    @include media(tablet) {
+      font-size: 14px;
+    }
   }
 }
