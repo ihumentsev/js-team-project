@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <div class="wrapper-content">
+      <!-- ❗️❗️❗️ Add partials like so for every page -->
 
-
-    <include src="./partials/header.html"></include>
-    <include src="./partials/content-container.html"></include>
-    <include src="./partials/pagination.html"></include>
-    <include src="./partials/footer.html"></include>
-    <include src="./partials/modal.html"></include>
-    <include src="./partials/preloader.html"></include>
+      <include src="./partials/header.html"></include>
+      <main class="main">
+        <include src="./partials/content-container.html"></include>
+        <include src="./partials/pagination.html"></include>
+      </main>
+      <include src="./partials/footer.html"></include>
+      <include src="./partials/modal.html"></include>
+      <include src="./partials/preloader.html"></include>
+    </div>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
