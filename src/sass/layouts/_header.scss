@@ -78,10 +78,8 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
   width: 107px;
   height: 107px;
-  //   background-image: linear-gradient(136.07deg, rgba(196, 196, 196, 0.03) 10.75%, rgba(196, 196, 196, 0) 92.33%);
   backdrop-filter: blur(30px);
   border-bottom-right-radius: 100%;
   padding-top: 19px;
@@ -102,11 +100,14 @@ header {
 
 .logo__icon {
   display: inline-block;
-  stroke-width: 1px;
-
   width: 60px;
   height: 25px;
   fill: var(--main-txt-clr);
+  &:hover,
+  &:focus {
+    fill: var(--accent-clr);
+    filter: drop-shadow(0 0 20px #f8fcf9);
+    }
   @include media(tablet) {
     width: 100px;
     height: 29px;
@@ -142,12 +143,6 @@ header {
   }
 }
 
-.searching__container {
-  display: flex;
-  flex-direction: column;
-//   position: relative;
-}
-
 .searching__form {
   display: flex;
   width: 280px;
@@ -164,7 +159,7 @@ header {
     width: 608px;
   }
 }
-.searching-all__container{
+.searching__container{
     position: relative;
     width: 280px;
     @include media(tablet) {
@@ -174,23 +169,23 @@ header {
       width: 288px;
     }
 }
-.searching-country__container{
-    position: relative;
-    width: 280px;
-    @include media(tablet) {
-      width: 336px;
-    }
-    @include media(desktop) {
-      width: 288px;
-    }
+// .input::placeholder:hover{
+//   color: white;
+// }
+.input:hover::placeholder {
+  color: white;
 }
 .input {
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     box-shadow: 0 0 0 2px var(--accent-clr);
+    filter: drop-shadow(0 0 20px #dbc0f8);
+    color: white;
   }
+  outline: none;
+  color: var(--secondary-txt-color);
   background: rgba(255, 255, 255, 0.2);
-  color: #939393; 
   padding: 10px 32px;
   border: none;
   border-radius: 20px;
@@ -205,41 +200,40 @@ header {
   }
 }
 
+
+
 .searching__icon {
-    position: absolute;
-    top: 15px;
     right: 35px;
     width: 12px;
     height: 12px;
-    pointer-events: none;
-    z-index: 29;
-    fill: var(--secondary-txt-color);
 @include media(tablet) {
     display: none;
   }
   @include media(desktop) {
-    top: 15px;
     right: 35px;
     display: inline-block;
   }
 }
 .choosing-country__icon {
-    position: absolute;
-    top: 15px;
     right: 35px;
-    pointer-events: none;
     width: 12px;
     height: 12px;
-    z-index: 29;
-//   fill: var(--secondary-txt-color);
-fill: var(--secondary-txt-color);
 @include media(tablet) {
-    top: 15px;
     right: 35px;
   }
   @include media(desktop) {
-    top: 15px;
     right: 34px;
     
   }
+}
+
+.icon{    pointer-events: none;
+  position: absolute;
+  top: 15px;
+  z-index: 29;
+  fill: var(--secondary-txt-color);
+  .input:hover ~ &,
+.input:focus ~ & {
+  fill: var(--accent-text-color);
+}
 }

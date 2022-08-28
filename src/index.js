@@ -4,6 +4,7 @@ import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 import { renderPagination } from './js/pagination.js';
+import btnToTop from './js/topBtn';
 //////////////////////////
 preloader();
 const searchingInput = document.querySelector('.start-searching');
