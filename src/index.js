@@ -3,7 +3,11 @@ import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
-import { renderPagination } from './js/pagination.js';
+import {
+  renderPagination,
+  setCurrentPage,
+  clearPagination,
+} from './js/pagination.js';
 //////////////////////////
 preloader();
 const searchingInput = document.querySelector('.start-searching');
@@ -11,8 +15,9 @@ const countryInput = document.querySelector('.choose-country');
 const listItemEl = document.querySelector('.event-list');
 const DEBOUNCE_DELAY = 400;
 
-let eventSearch;
+let eventSearch = '';
 let totalPages;
+let isSearching = false;
 
 searchingInput.addEventListener(
   'input',
@@ -20,21 +25,29 @@ searchingInput.addEventListener(
 );
 
 function onInputClick(event) {
-  eventSearch = event.target.value;
-  listItemEl.innerHTML = '';
-  if (eventSearch === '') {
+  eventSearch = event.target.value.trim();
+
+  if (!eventSearch) {
+    if (isSearching) {
+      isSearching = false;
+      setCurrentPage(0, renderEvents);
+    }
     return;
   }
 
-  renderEvents();
+  isSearching = true;
+  setCurrentPage(0, renderEvents);
 }
 
+renderEvents();
+
 async function renderEvents(page = 0) {
-  const response = await getEvens(`${eventSearch}`, '', page);
+  const response = await getEvens(eventSearch, '', page);
 
   try {
     if (response.page.totalPages === 0) {
       listItemEl.innerHTML = '';
+      clearPagination();
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
