@@ -17,6 +17,7 @@
   text-align: center;
   gap: 8px;
   padding-top: 20px;
+  cursor: pointer;
 
   @include media(tablet) {
     width: 152px;

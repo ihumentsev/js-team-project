@@ -1,9 +1,14 @@
-const wrapperPreloader = document.querySelector('.wrapper')
-function preloader (){
+
+const wrapperPreloader = document.querySelector('.preloader')
+export default function preloader (){
     setTimeout(()=>{
-
-        wrapperPreloader.style.display = 'none';
-
+        wrapperPreloader.style.opacity = '0';
+       
+        setTimeout(()=>{
+           
+            wrapperPreloader.style.display = 'none';
+    
+        }, 200)
     }, 1500)
 }
 preloader ();

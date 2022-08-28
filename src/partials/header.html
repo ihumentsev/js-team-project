@@ -1,25 +1,58 @@
 <header>
+  <section class="header__section container">
     <div class="logo__container">
-        <a class="logo__link" href="./index.html">
-            <svg class="logo__icon">
-              <use class="logo__s" href="./images/svg/sprite.svg#desctop-logo" transform-origin="100 100"></use>
-            </svg>
-          </a>
-      </div>
-    <div class="container">
-
-    <h1 class="header__title">FIND BEST EVENTS<br>
-      AROUND THE WORLD</h1>
-    <div class="searching__container">
-      <svg class="searching__icon">
-          <use class="searching__icon-s" href="./images/svg/sprite.svg#search-icon" width="60px" height="25px"></use>
-      </svg>
-      <div class="input__container">
-      <input class="start-searching input" type="text" placeholder="Start searching"/>
-      <input class="choose-country input" type="text" placeholder="Choose country"/>
-  </div>
+      <a class="logo__link" href="./index.html">
+        <svg class="logo__icon">
+          <use
+            class="logo__s"
+            href="./images/svg/sprite.svg#desctop-logo"
+          ></use>
+        </svg>
+      </a>
     </div>
-</div>
-  </header>
-  
-  
+    <h1 class="header__title">
+      FIND BEST EVENTS<br />
+      AROUND THE WORLD
+    </h1>
+    <form class="searching__form">
+      <div class="searching-all__container">
+        <label for="search-all">
+
+          <input
+            required
+            name="search-all"
+            id="search-all"
+            class="start-searching input"
+            type="text"
+            placeholder="Start searching"
+        />
+        <svg class="searching__icon" width="12px" height="12px">
+          <use
+            class="searching__icon-s"
+            href="./images/svg/sprite.svg#search-icon"
+          ></use>
+        </svg>
+      </label>
+      </div>
+
+      <div class="searching-country__container">
+        <label for="search-country">
+          <select
+          style="appearance:none"
+            name="search-country"
+            id="search-country"
+            class="choose-country input"
+            type="text"
+            placeholder="Choose country"
+        >
+        <option selected="" disabled="" hidden="" value="">Choose country</option>
+        <option value="">All countries</option>
+      </select>
+        <svg class="choosing-country__icon" width="15px" height="10px">
+          <use href="./images/svg/sprite.svg#polygon"></use>
+        </svg>
+      </label>
+      </div>
+    </form>
+  </section>
+</header>
