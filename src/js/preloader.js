@@ -1,16 +1,14 @@
-// export default function preloader (){
-//     const wrapperPreloader = document.querySelector('.wrapper')
-//     setTimeout(()=>{
-//         wrapperPreloader.classList.add('ishidden') 
-//     }, 1500)
-// }
 
-const wrapperPreloader = document.querySelector('.wrapper')
+const wrapperPreloader = document.querySelector('.preloader')
 export default function preloader (){
-    setTimeout(()=>{
-
-        wrapperPreloader.style.display = 'none';
-
-    }, 1500)
+    // setTimeout(()=>{
+    //     wrapperPreloader.style.opacity = '0';
+       
+    //     setTimeout(()=>{
+           
+    //         wrapperPreloader.style.display = 'none';
+    
+    //     }, 200)
+    // }, 1500)
 }
 preloader ();
