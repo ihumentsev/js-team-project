@@ -19,4 +19,3 @@ export default window.onload = function (){
 //     }, 500);
 //   }
 
-
