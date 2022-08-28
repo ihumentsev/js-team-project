@@ -107,7 +107,7 @@ header {
   &:focus {
     fill: var(--accent-clr);
     filter: drop-shadow(0 0 20px #f8fcf9);
-    }
+  }
   @include media(tablet) {
     width: 100px;
     height: 29px;
@@ -125,13 +125,47 @@ header {
   }
 }
 
-.header__title {
+// .header__title {
+//   text-align: center;
+//   color: var(--accent-clr);
+//   font-weight: 900;
+//   font-size: 18px;
+//   line-height: calc(22 / 18);
+//   margin-bottom: 24px;
+//   @include media(tablet) {
+//     font-size: 30px;
+//     line-height: calc(37 / 30);
+//   }
+//   @include media(desktop) {
+//     width: 608px;
+//     font-size: 50px;
+//     line-height: calc(61 / 50);
+//   }
+// }
+// /////////////////////////////////////
+.h-one__container {
+  // display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: var(--accent-clr);
+  width: 280px;
+  margin-bottom: 24px;
+  @include media(tablet) {
+    text-align: center;
+    width: 400px;
+  }
+  @include media(desktop) {
+    width: 608px;
+  }
+}
+.title{
+  color: #dc56c5;
+  text-shadow: 0 0 0 transparent, 0 0 10px #4c00fe,
+    0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #4c00fe, 0 0 100px #4c00fe,
+    0 0 200px #4c00fe, 0 0 300px #4c00fe, 0 0 500px #4c00fe, 0 0 1000px #4c00fe;
   font-weight: 900;
   font-size: 18px;
   line-height: calc(22 / 18);
-  margin-bottom: 24px;
   @include media(tablet) {
     font-size: 30px;
     line-height: calc(37 / 30);
@@ -142,7 +176,83 @@ header {
     line-height: calc(61 / 50);
   }
 }
+.h-one__container span {
+  -webkit-transform: translateZ(0) translate3D(0, 0, 0);
+  transform: translateZ(0) translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: opacity;
+}
+.h-one__container .first-line {
+  -webkit-animation: blink 4s infinite alternate;
+  animation: blink 4s infinite alternate;
+}
+.h-one__container .second-line {
 
+  // text-shadow: 0 0 0 transparent, 0 0 10px #2695ff,
+  //   0 0 20px rgba(38, 149, 255, 0.5), 0 0 40px #4c00fe, 0 0 100px #4c00fe,
+  //   0 0 200px #4c00fe, 0 0 300px #4c00fe, 0 0 500px #4c00fe;
+  -webkit-animation: buzz 2.25s infinite alternate;
+  animation: buzz 2.25s infinite alternate;
+}
+
+@-webkit-keyframes buzz {
+  70% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes buzz {
+  70% {
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .h-one__container {
+    width: 608px;
+    font-size: 50px;
+  }
+
+  .h-one__container .second-line {
+    font-size: 50px;
+  }
+}
+
+// ///////////////////////////////////////
 .searching__form {
   display: flex;
   width: 280px;
@@ -159,15 +269,15 @@ header {
     width: 608px;
   }
 }
-.searching__container{
-    position: relative;
-    width: 280px;
-    @include media(tablet) {
-      width: 336px;
-    }
-    @include media(desktop) {
-      width: 288px;
-    }
+.searching__container {
+  position: relative;
+  width: 280px;
+  @include media(tablet) {
+    width: 336px;
+  }
+  @include media(desktop) {
+    width: 288px;
+  }
 }
 // .input::placeholder:hover{
 //   color: white;
@@ -200,13 +310,11 @@ header {
   }
 }
 
-
-
 .searching__icon {
-    right: 35px;
-    width: 12px;
-    height: 12px;
-@include media(tablet) {
+  right: 35px;
+  width: 12px;
+  height: 12px;
+  @include media(tablet) {
     display: none;
   }
   @include media(desktop) {
@@ -215,25 +323,26 @@ header {
   }
 }
 .choosing-country__icon {
-    right: 35px;
-    width: 12px;
-    height: 12px;
-@include media(tablet) {
+  right: 35px;
+  width: 12px;
+  height: 12px;
+  @include media(tablet) {
     right: 35px;
   }
   @include media(desktop) {
     right: 34px;
-    
   }
 }
 
-.icon{    pointer-events: none;
+.icon {
+  pointer-events: none;
   position: absolute;
   top: 15px;
   z-index: 29;
   fill: var(--secondary-txt-color);
   .input:hover ~ &,
-.input:focus ~ & {
-  fill: var(--accent-text-color);
+  .input:focus ~ & {
+    fill: var(--accent-text-color);
+  }
 }
-}
+

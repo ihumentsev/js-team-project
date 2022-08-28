@@ -10,48 +10,59 @@
         </svg>
       </a>
     </div>
-    <h1 class="header__title">
+    <div class="h-one__container trnstn">
+      <span class="first-line title trnstn">FIND BEST EVENTS</span><br />
+      <span class="second-line title trnstn">AROUND THE WORLD</span>
+    </div>
+    <!-- <h1 class="header__title">
       FIND BEST EVENTS<br />
       AROUND THE WORLD
-    </h1>
+    </h1> -->
     <form class="searching__form trnstn">
       <div class="searching__container">
         <label for="searching__label">
           <input
-            required
+            autocomplete="off"
             name="search-all"
             id="search-all"
             class="start-searching__input input trnstn start-searching"
             type="text"
             placeholder="Start searching"
-        />
-        <svg class="searching__icon icon trnstn" width="12px" height="12px">
-          <use
-            class="searching__icon-s"
-            href="./images/svg/sprite.svg#search-icon"
-          ></use>
-        </svg>
-      </label>
+          />
+          <svg class="searching__icon icon trnstn" width="12px" height="12px">
+            <use
+              class="searching__icon-s"
+              href="./images/svg/sprite.svg#search-icon"
+            ></use>
+          </svg>
+        </label>
       </div>
 
       <div class="searching__container">
         <label for="searching__label">
           <select
-          style="appearance:none"
+            style="appearance: none"
             name="search-country"
             id="search-country"
             class="choose-country__input input trnstn"
             type="text"
             placeholder="Choose country"
-        >
-        <option selected="" disabled="" hidden="" value="">Choose country</option>
-        <option value="">All countries</option>
-      </select>
-        <svg class="choosing-country__icon icon trnstn" width="15px" height="10px">
-          <use href="./images/svg/sprite.svg#polygon"></use>
-        </svg>
-      </label>
+          >
+            <option selected="" disabled="" hidden="" value="">
+              Choose country
+            </option>
+            <option value="">All countries</option>
+          </select>
+          <svg
+            class="choosing-country__icon icon trnstn"
+            width="15px"
+            height="10px"
+          >
+            <use href="./images/svg/sprite.svg#polygon"></use>
+          </svg>
+        </label>
       </div>
     </form>
   </section>
 </header>
+
