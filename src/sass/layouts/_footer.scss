@@ -75,3 +75,142 @@ height: 30px;
   margin: 0 auto;
 fill: var(--accent-clr);
 }
+
+/////////FOOTER MODAL////////////////////////////////////////////////////////
+
+.container .team {
+  display: inline-flex;
+  margin-right: auto;
+  }
+
+.team__title {
+color: var(--bg-primary-color);
+text-align: center;
+margin-bottom: 20px;
+}
+
+.team__img {
+  margin-bottom: 10px;
+  border-radius: 50px 0px;
+}
+
+.team__item {
+  
+  width: 160px;
+  height: auto;
+  border-radius: 50px   0px;
+  background-color: var(--bg-primary-color);
+  text-align: center;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14);
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.team__member {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1.42;
+}
+
+.team__position {
+  font-size: 14px;
+  line-height: 1.42;
+  color: var(--bg-primary-color);
+  margin-bottom: 20px;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/*  SECTION SOCIAL ICONS */
+.member-social__icon {
+  fill: #afb1b8;
+}
+
+.member-social__link:hover
+.member-social__icon {
+  fill: var(--accent-clr);
+}
+
+.member-social__link:focus
+.member-social__icon {
+  fill: white;
+}
+
+.member-social__link {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.member-social__link:hover {
+  background-color: var(--accent-text-color);
+}
+
+.member-social__link:focus {
+  background-color: var(--accent-text-color);
+}
+
+/////////////MODAL WINDOW CSS///////////////
+
+.modal-close-btn {
+  position: absolute;
+  cursor: pointer;
+  background: none;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+}
+
+.close-icon {
+  fill: red;
+}
+
+.modal-close-btn:hover {
+  fill: blue;
+}
+
+.backdrop__footer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  top: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-footer {
+  width: 70%;
+  height: 45%;
+  background: #FFF2FD;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50px 0px 50px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 140;
+}
