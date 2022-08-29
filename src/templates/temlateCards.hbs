@@ -1,8 +1,6 @@
-<li class="event-item">
-    <article class="event-card">
-    <img src="{{images.9.url}}" alt="" class="event-card__image" />
-    <h3 class="event-card__title">{{name}}</h3>
-    <p class="event-card__date">{{dates.start.localDate}}</p>
-    <a href="#" target="_blank" class="event-card__location">{{_embedded.venues.0.name}}</a>
-  </article>
-</li>
+<article class="event-card event-item">
+  <img src="{{images.9.url}}" alt="" class="event-card__image" />
+  <h3 class="event-card__title">{{name}}</h3>
+  <p class="event-card__date">{{dates.start.localDate}}</p>
+  {{#if _embedded.venues.0.name}}<a href="#" target="_blank" class="event-card__location">{{_embedded.venues.0.name}}</a>{{/if}}
+</article>
