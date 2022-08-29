@@ -183,15 +183,19 @@ header {
   backface-visibility: hidden;
   will-change: opacity;
 }
-.h-one__container .first-line {
+.h-one__container .first-line__blink1 {
+  -webkit-animation: blink 2s infinite alternate;
+  animation: blink 2s infinite alternate;
+}
+.h-one__container .first-line__blink2 {
+  -webkit-animation: blink 3s infinite alternate;
+  animation: blink 3s infinite alternate;
+}
+.h-one__container .first-line__blink3 {
   -webkit-animation: blink 4s infinite alternate;
   animation: blink 4s infinite alternate;
 }
 .h-one__container .second-line {
-
-  // text-shadow: 0 0 0 transparent, 0 0 10px #2695ff,
-  //   0 0 20px rgba(38, 149, 255, 0.5), 0 0 40px #4c00fe, 0 0 100px #4c00fe,
-  //   0 0 200px #4c00fe, 0 0 300px #4c00fe, 0 0 500px #4c00fe;
   -webkit-animation: buzz 2.25s infinite alternate;
   animation: buzz 2.25s infinite alternate;
 }
