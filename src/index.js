@@ -8,10 +8,13 @@ import {
   setCurrentPage,
   clearPagination,
 } from './js/pagination.js';
-//////////////////////////
+import btnToTop from './js/topBtn';
+import countrys from './json/countrys.json';
+import temlateCountry from './templates/countrySelector.hbs';
+
 preloader();
 const searchingInput = document.querySelector('.start-searching');
-const countryInput = document.querySelector('.choose-country');
+const selectEl = document.querySelector('#search-country');
 const listItemEl = document.querySelector('.event-list');
 const DEBOUNCE_DELAY = 400;
 
@@ -23,6 +26,14 @@ searchingInput.addEventListener(
   'input',
   debounce(onInputClick, DEBOUNCE_DELAY)
 );
+
+selectEl.addEventListener('change', debounce(onSelectChange, DEBOUNCE_DELAY));
+
+function onSelectChange(event) {
+  countrySearch = event.target.value;
+
+  renderEvents();
+}
 
 function onInputClick(event) {
   eventSearch = event.target.value.trim();
@@ -69,4 +80,13 @@ async function renderEvents(page = 0) {
   } catch (error) {
     console.log(error);
   }
+}
+
+const selectOption = createOptions(countrys);
+
+const optionList = selectOption.map(item => temlateCountry(item)).join('');
+selectEl.insertAdjacentHTML('beforeend', optionList);
+
+function createOptions(countrys) {
+  return countrys;
 }
