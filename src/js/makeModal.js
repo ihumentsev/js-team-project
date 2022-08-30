@@ -12,6 +12,7 @@ const refs = {
 
 function getIdOnClickEventImg(e) {
   eventId = e.target.id;
+  console.log(e.target.id);
   return eventId;
 }
 
@@ -20,7 +21,7 @@ function getEventByID(eventId) {
 }
 
 export async function onOpenModal(e) {
-  if (e.target.nodeName !== 'IMG') return;
+  if (e.target.nodeName !== 'IMG' & 'h3') return;
   console.log(e.target);
   getIdOnClickEventImg(e);
   getEventByID(eventId);
