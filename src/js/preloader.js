@@ -1,21 +1,15 @@
 
-const wrapperPreloader = document.querySelector('.preloader')
+const preloader = document.querySelector('.preloader')
+const bodeEl = document.querySelector('body')
 export default window.onload = function (){
     setTimeout(()=>{
-        wrapperPreloader.style.opacity = '0';
+        preloader.style.opacity = '0';
+        bodeEl.style.overflowY = 'visible';
         setTimeout(()=>{
-            wrapperPreloader.classList.add('ishidden');  
+            preloader.classList.add('ishidden');  
+            preloader.remove()
         }, 200)
     }, 1000)
 }
 
-
-
-// window.onload = function () {
-//     document.body.classList.add('loaded_hiding');
-//     window.setTimeout(function () {
-//       document.body.classList.add('loaded');
-//       document.body.classList.remove('loaded_hiding');
-//     }, 500);
-//   }
 

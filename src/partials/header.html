@@ -17,10 +17,6 @@
       <br />
       <span class="second-line title trnstn">AROUND THE WORLD</span>
     </div>
-    <!-- <h1 class="header__title">
-      FIND BEST EVENTS<br />
-      AROUND THE WORLD
-    </h1> -->
     <form class="searching__form trnstn">
       <div class="searching__container">
         <label for="searching__label">
@@ -40,9 +36,38 @@
           </svg>
         </label>
       </div>
-
       <div class="searching__container">
-        <label for="searching__label">
+        <svg
+        class="choosing-country__icon icon trnstn"
+        width="15px"
+        height="10px"
+      >
+        <use href="./images/svg/sprite.svg#polygon"></use>
+      </svg>
+        <button class="choose-country__input input trnstn js-dropbtn" type="button">Choose country</button>
+          <ul id="js-dropdown-content" class="country__list">
+            <li class="country__item">1</li>
+            <li class="country__item">2</li>
+            <li class="country__item">3</li>
+            <li class="country__item">4</li>
+            <li class="country__item">5</li>
+            <li class="country__item">1</li>
+            <li class="country__item">2</li>
+            <li class="country__item">3</li>
+            <li class="country__item">4</li>
+            <li class="country__item">5</li>
+            <li class="country__item">1</li>
+            <li class="country__item">2</li>
+            <li class="country__item">3</li>
+            <li class="country__item">4</li>
+            <li class="country__item">5</li>
+            <li class="country__item">1</li>
+            <li class="country__item">2</li>
+            <li class="country__item">3</li>
+            <li class="country__item">4</li>
+            <li class="country__item">5</li>
+          </ul>
+        <!-- <label for="searching__label">
           <select
             style="appearance: none"
             name="search-country"
@@ -56,14 +81,7 @@
             </option>
             <option value="">All countries</option>
           </select>
-          <svg
-            class="choosing-country__icon icon trnstn"
-            width="15px"
-            height="10px"
-          >
-            <use href="./images/svg/sprite.svg#polygon"></use>
-          </svg>
-        </label>
+        </label> -->
       </div>
     </form>
   </section>
