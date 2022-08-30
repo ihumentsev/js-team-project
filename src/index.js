@@ -16,7 +16,7 @@ import temlateCountry from './templates/countrySelector.hbs';
 import { onOpenModal } from './js/makeModal';
 
 preloader();
-dropDown()
+
 const searchingInput = document.querySelector('.start-searching');
 const selectEl = document.querySelector('#search-country');
 const listItemEl = document.querySelector('.event-list');
