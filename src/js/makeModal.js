@@ -21,6 +21,7 @@ function getEventByID(eventId) {
 
 export async function onOpenModal(e) {
   if (e.target.nodeName !== 'IMG') return;
+  console.log(e.target);
   getIdOnClickEventImg(e);
   getEventByID(eventId);
 
