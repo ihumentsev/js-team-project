@@ -1,4 +1,4 @@
-import doModal from '../templates/modal.hbs';
+/* import doModal from '../templates/modal.hbs';
 import axios from 'axios';
 
 import getEvens from './getEvents';
@@ -8,16 +8,6 @@ const refs = {
   modalContainer: document.querySelector('.js-modal'),
   closeModalBtn: document.querySelector('.js-modal-close-btn'),
 };
-
-refs.eventList.addEventListener('click', onOpenModal);
-/* refs.closeModalBtn.addEventListener('click', onCloseModalBtn); */
-
-/* async function getEventByID(eventId) {
-  const url = 'https://app.ticketmaster.com/discovery/v2/events.json';
-  const apiKey = 'w7mmBkK7aLh5F5nZUPuvBPD23VXj8bAs';
-  const filter = `?apikey=${apiKey}&id=${eventId}`;
-  return await axios.get(`${url}${filter}`).then(res => res.data);
-} */
 
 function getIdOnClickEventImg(e) {
   eventId = e.target.id;
@@ -45,3 +35,4 @@ function onCloseModalBtn() {
   document.body.classList.remove('no-scroll');
   refs.modalContainer.classList.add('is-hidden');
 }
+refs.eventList.addEventListener('click', onOpenModal); */

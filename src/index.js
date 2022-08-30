@@ -1,4 +1,3 @@
-import './js/makeModal';
 import preloader from './js/preloader.js';
 import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
@@ -111,3 +110,5 @@ selectEl.insertAdjacentHTML('beforeend', optionList);
 function createOptions(countrys) {
   return countrys;
 }
+
+import './js/makeModal';

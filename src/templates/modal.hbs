@@ -1,0 +1,83 @@
+<div class='modal__body'>
+  <button class='modal__close-btn js-modal-close-btn' type='button'></button>
+
+  <div class='modal__img__thumb-circle'>
+    <picture class='modal__img-circle'>
+      <source
+        srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
+        media='(max-width: 600px)'
+        sizes='(min-width: 480px) 480px, 100vw'
+      />
+      <source
+        srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
+        media='(min-width: 601px)'
+        sizes='(min-width: 800px) 800px, 100vw'
+      />
+      <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+    </picture>
+  </div>
+
+  <div class='modal__info modal__wrapper'>
+
+    <div class='modal__info__img__thumb'>
+      <picture class='modal__info__img'>
+        <source
+          srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
+          media='(max-width: 600px)'
+          sizes='(min-width: 480px) 480px, 100vw'
+        />
+        <source
+          srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
+          media='(min-width: 601px)'
+          sizes='(min-width: 800px) 800px, 100vw'
+        />
+        <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+      </picture>
+    </div>
+
+    <ul class='modal__info__list'>
+      <li class='modal__info__item'>
+        <h2 class='modal__info__title'>INFO</h2>
+        <p class='modal__info__text'>Atlas Weekend is the largest music festival
+          in Ukraine. More than 200 artists will create a proper music festival
+          atmosphere on 10 stages</p>
+      </li>
+      <li class='modal__info__item'>
+        <h2 class='modal__info__title'>WHEN</h2>
+        <time class='modal__info__text' datetime='2021-06-09 20:00'>
+          <span class='modal__info__date'>2021-06-09</span><br />
+          <span class='modal__info__time'>20:00&nbsp;
+            <span
+              class='modal__info__time-zone'
+            >&#8317;Kyiv&#8725;Ukraine&#8318;</span></span>
+        </time>
+      </li>
+      <li class='modal__info__item'>
+        <h2 class='modal__info__title'>WHERE</h2>
+        <p class='modal__info__text'>
+          <span class='modal__info__location location'>
+            <span class='location__city'>Kyiv&comma;&nbsp;Ukraine</span>
+            <span class='location__place'>VDNH</span>
+          </span>
+        </p>
+      </li>
+      <li class='modal__info__item'>
+        <h2 class='modal__info__title'>WHO</h2>
+        <p class='modal__info__text'>Black and Peace</p></li>
+      <li class='modal__info__item'>
+        <h2 class='modal__info__title'>PRICES</h2>
+        <ul class='modal__info__prices prices'>
+          <li class='prices__item'>
+            <span class='prices__item__standart'>Standart 300-500 UAH</span>
+            <button class='prices__btn' type='button'>BUY TICKETS</button>
+          </li>
+          <li class='prices__item'>
+            <span class='prices__item__vip'>VIP 1000-1500 UAH</span>
+            <button class='prices__btn' type='button'>BUY TICKETS</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <button class='modal__more-btn'>MORE FROM THIS AUTHOR</button>
+</div>
