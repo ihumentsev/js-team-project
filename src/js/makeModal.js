@@ -4,15 +4,31 @@ import axios from 'axios';
 import getEvens from './getEvents';
 
 const refs = {
-  // old: eventList: document.querySelector('.event-card'),
-  // old: eventList: document.querySelector('.js-event-list'),
+
+  eventList: document.querySelector('.js-event-list'),
+
   modalContainer: document.querySelector('.js-modal'),
   closeModalBtn: document.querySelector('.js-modal-close-btn'),
 };
 
+
 function getIdOnClickEventImg(e) {
   eventId = e.target.id;
   console.log(e.target.id);
+
+refs.eventList.addEventListener('click', onOpenModal);
+/* refs.closeModalBtn.addEventListener('click', onCloseModalBtn); */
+
+/* async function getEventByID(eventId) {
+  const url = 'https://app.ticketmaster.com/discovery/v2/events.json';
+  const apiKey = 'w7mmBkK7aLh5F5nZUPuvBPD23VXj8bAs';
+  const filter = `?apikey=${apiKey}&id=${eventId}`;
+  return await axios.get(`${url}${filter}`).then(res => res.data);
+} */
+
+function getIdOnClickEventImg(e) {
+  eventId = e.target.id;
+
   return eventId;
 }
 
@@ -20,9 +36,10 @@ function getEventByID(eventId) {
   console.log(eventId);
 }
 
-export async function onOpenModal(e) {
-  if (e.target.nodeName !== 'IMG' & 'h3') return;
-  console.log(e.target);
+
+async function onOpenModal(e) {
+  if (e.target.nodeName !== 'IMG') return;
+
   getIdOnClickEventImg(e);
   getEventByID(eventId);
 
@@ -38,4 +55,6 @@ function onCloseModalBtn() {
   document.body.classList.remove('no-scroll');
   refs.modalContainer.classList.add('is-hidden');
 }
-// old: refs.eventList.addEventListener('click', onOpenModal);
+
+
+

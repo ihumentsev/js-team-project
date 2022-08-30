@@ -1,6 +1,5 @@
 // @import '~node_modules/modern-normalize/modern-normalize.css';
 
-
 *,
 *::before,
 *::after {
@@ -14,13 +13,39 @@ html {
 }
 
 body {
+  &.no-scroll {
+    overflow: hidden;
+  }
   height: 100%;
+
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(36, 253, 239);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #4c00fe 0%, #dc56c5 99%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(180deg, #dc56c5 0%, #4c00fe 99%);
+}
+
 .main {
   flex: 1 1 auto;
-  }
-  
+}
+
 .wrapper-content {
   min-height: 100%;
   display: flex;
