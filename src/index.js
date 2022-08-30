@@ -1,4 +1,5 @@
 import preloader from './js/preloader.js';
+import dropDown from './js/choose-country-scroll.js'
 import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
@@ -13,6 +14,7 @@ import countrys from './json/countrys.json';
 import temlateCountry from './templates/countrySelector.hbs';
 
 preloader();
+dropDown()
 const searchingInput = document.querySelector('.start-searching');
 const selectEl = document.querySelector('#search-country');
 const listItemEl = document.querySelector('.event-list');
