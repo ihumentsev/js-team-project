@@ -110,3 +110,5 @@ selectEl.insertAdjacentHTML('beforeend', optionList);
 function createOptions(countrys) {
   return countrys;
 }
+
+import './js/makeModal';
