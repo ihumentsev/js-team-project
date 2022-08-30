@@ -1,16 +1,40 @@
 <div class='modal__body'>
   <button class='modal__close-btn js-modal-close-btn' type='button'></button>
-  <img
-    class='modal__img-circle'
-    src='https://s1.ticketm.net/dam/a/497/b8644000-6f16-4936-8a0b-c548cabd2497_62561_CUSTOM.jpg'
-    alt='alt of img'
-  />
-  <div class='modal__info'>
-    <img
-      class='modal__info__img'
-      src='https://s1.ticketm.net/dam/a/497/b8644000-6f16-4936-8a0b-c548cabd2497_62561_CUSTOM.jpg'
-      alt='alt of img'
-    />
+
+  <div class='modal__img__thumb-circle'>
+    <picture class='modal__img-circle'>
+      <source
+        srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
+        media='(max-width: 600px)'
+        sizes='(min-width: 480px) 480px, 100vw'
+      />
+      <source
+        srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
+        media='(min-width: 601px)'
+        sizes='(min-width: 800px) 800px, 100vw'
+      />
+      <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+    </picture>
+  </div>
+
+  <div class='modal__info modal__wrapper'>
+
+    <div class='modal__info__img__thumb'>
+      <picture class='modal__info__img'>
+        <source
+          srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
+          media='(max-width: 600px)'
+          sizes='(min-width: 480px) 480px, 100vw'
+        />
+        <source
+          srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
+          media='(min-width: 601px)'
+          sizes='(min-width: 800px) 800px, 100vw'
+        />
+        <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+      </picture>
+    </div>
+
     <ul class='modal__info__list'>
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>INFO</h2>
