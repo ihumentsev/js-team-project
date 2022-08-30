@@ -22,7 +22,9 @@ export function renderPagination(totalPages, renderEvents) {
 
   if (currentPage > 3 && totalPages > 5) {
     createButton(1, false, () => setCurrentPage(0, renderEvents));
-    createButton('...');
+    createButton('...', false, () =>
+      setCurrentPage(currentPage - 3, renderEvents)
+    );
   }
 
   for (let i = startPos; i < startPos + renderCount; i++) {
@@ -32,7 +34,9 @@ export function renderPagination(totalPages, renderEvents) {
   }
 
   if (currentPage + 3 < totalPages && totalPages > 5) {
-    createButton('...');
+    createButton('...', false, () =>
+      setCurrentPage(currentPage + 3, renderEvents)
+    );
     createButton(totalPages, false, () =>
       setCurrentPage(totalPages - 1, renderEvents)
     );
