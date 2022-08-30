@@ -57,10 +57,10 @@
   opacity: 100%;
   transition: opacity 0.5s;
   border: 1px solid #DC56C5;
-border-radius: 10px 0px;
-opacity: 60%;
-width: 30px;
-height: 30px;
+  border-radius: 10px 0px;
+  opacity: 60%;
+  width: 30px;
+  height: 30px;
 }
 
 .back-to-top:hover {
@@ -74,4 +74,192 @@ height: 30px;
 .back-to-top__icon {
   margin: 0 auto;
 fill: var(--accent-clr);
+}
+
+/////////FOOTER MODAL////////////////////////////////////////////////////////
+
+.container .team {
+  display: flex;
+  margin-right: auto;
+  }
+
+.team__title {
+display: none;
+color: var(--bg-primary-color);
+text-align: center;
+margin-bottom: 20px;
+@include media(tablet){
+  display: flex;
+}
+}
+
+//photo developer
+.team__img {
+  margin-bottom: 10px;
+  border-radius: 50px 0px;
+}
+
+.team__list {
+  @include media(tablet){
+    display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-evenly;
+  }
+}
+
+//card developer
+.team__item {
+  max-width: 320px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 50px   0px;
+  background-color: var(--bg-primary-color);
+  text-align: center;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
+  @include media(tablet){
+    max-width: 150px;
+    height: 270px;
+    margin-right: 10px;
+    justify-content:  center;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.025);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+}
+
+.team__member {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1.42;
+}
+
+.team__position {
+  font-size: 14px;
+  line-height: 1.42;
+  color: var(--bg-primary-color);
+  margin-bottom: 20px;
+}
+
+.member-social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/*  SECTION SOCIAL ICONS */
+
+.member-social__link {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  // transition-property: background-color;
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.member-social__icon {
+    fill: #afb1b8;
+  }
+
+.member-social__link:hover
+.member-social__icon {
+    fill: var(--accent-clr);
+  }
+
+.member-social__link:focus
+.member-social__icon {
+    fill: white;
+  }
+
+.member-social__link:hover {
+    background-color: var(--accent-text-color);
+  }
+
+.member-social__link:focus {
+    background-color: var(--accent-text-color);
+  }
+
+
+/////////////MODAL WINDOW CSS///////////////
+
+.modal-close-btn {
+  position: absolute;
+  cursor: pointer;
+  background: none;
+  top: 4px;
+  right: 4px;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+
+  @include media(tablet){
+    top: 8px;
+  right: 8px;
+      }
+}
+
+.close-icon {
+  fill: blue;
+}
+.close-icon:hover {
+    fill: red;
+}
+
+.backdrop__footer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  top: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+//container for cards
+.modal-footer {
+  max-width: 320px;
+  height: 1890px;
+  background: #FFF2FD;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50px 0px 50px 0px;
+  margin: auto;
+  padding: 20px;
+  z-index: 140;
+  @include media(tablet) {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    height: 720px;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  @include media(desktop) {
+    max-width: 820px;
+    height: 360px;
+  }
 }

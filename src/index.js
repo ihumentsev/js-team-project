@@ -13,6 +13,7 @@ import {
 import btnToTop from './js/topBtn';
 import countrys from './json/countrys.json';
 import temlateCountry from './templates/countrySelector.hbs';
+import { onOpenModal } from './js/makeModal';
 
 preloader();
 dropDown()
@@ -95,11 +96,12 @@ async function renderEvents(page = 0) {
         .map(item => temlateCards(item))
         .join('');
       listItemEl.innerHTML = listItem;
-
+      let eventList = document.querySelector('.events-section');
+      eventList.addEventListener('click', onOpenModal);
       totalPages =
         response.page.totalPages > 50 ? 50 : response.page.totalPages;
       renderPagination(totalPages, renderEvents);
-    }
+      }
   } catch (error) {
     console.log(error);
   }
@@ -113,3 +115,5 @@ selectEl.insertAdjacentHTML('beforeend', optionList);
 function createOptions(countrys) {
   return countrys;
 }
+
+// import './js/makeModal';
