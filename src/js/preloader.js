@@ -1,14 +1,15 @@
 
-const wrapperPreloader = document.querySelector('.preloader')
-export default function preloader (){
+const preloader = document.querySelector('.preloader')
+const bodeEl = document.querySelector('body')
+export default window.onload = function (){
     setTimeout(()=>{
-        wrapperPreloader.style.opacity = '0';
-       
+        preloader.style.opacity = '0';
+        bodeEl.style.overflowY = 'visible';
         setTimeout(()=>{
-           
-            wrapperPreloader.style.display = 'none';
-    
+            preloader.classList.add('ishidden');  
+            preloader.remove()
         }, 200)
-    }, 1500)
+    }, 1000)
 }
-preloader ();
+
+
