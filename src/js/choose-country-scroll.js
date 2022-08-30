@@ -7,17 +7,18 @@ function onBtnClickOpenDropDown(event) {
     event.stopPropagation();
   ulDropDownEl.classList.toggle('is-shown');
   ulDropDownEl.addEventListener('click', onCoutryItemClickChoose);
-console.log(ulDropDownEl)
 
 }
 console.log(dropDownBtn.textContent)
 function onCoutryItemClickChoose (event) {
     event.stopPropagation();
-     if (event.currentTarget == dropDownItemEl){
-        dropDownBtn.textContent = dropDownItemEl.textContent;
+     if (event.target !== ''){
+        dropDownBtn.textContent = event.target.textContent;
         ulDropDownEl.classList.remove('is-shown');
     }
-    console.log(dropDownItemEl.textContent)
+    // console.dir(dropDownItemEl)
+    console.log(event.target.textContent)
+    // console.dir(dropDownItemEl.textContent)
 }
 
 window.onclick = function (event) {
