@@ -8,8 +8,8 @@ export default window.onload = function (){
         setTimeout(()=>{
             preloader.classList.add('ishidden');  
             preloader.remove()
-        }, 200)
-    }, 1000)
+        }, 500)
+    },400)
 }
 
 
