@@ -1,4 +1,4 @@
-import './js/makeModal';
+// import './js/makeModal';
 import preloader from './js/preloader.js';
 import dropDown from './js/choose-country-scroll.js';
 import getEvens from './js/getEvents';

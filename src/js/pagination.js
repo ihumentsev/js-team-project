@@ -67,3 +67,5 @@ export function setCurrentPage(number, renderEvents) {
 export function clearPagination() {
   paginationEl.innerHTML = '';
 }
+
+//new pagination
