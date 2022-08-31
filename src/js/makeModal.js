@@ -1,37 +1,71 @@
 import doModal from '../templates/modal.hbs';
 import axios from 'axios';
 
-import getEvens from './getEvents';
+import getEvent from './getEventById';
 
 const refs = {
   // old: eventList: document.querySelector('.event-card'),
   // old: eventList: document.querySelector('.js-event-list'),
   modalContainer: document.querySelector('.js-modal'),
   closeModalBtn: document.querySelector('.js-modal-close-btn'),
+  moreFmAuthor: document.querySelector('.js-modal__more-btn'),
+  inputSearchName: document.querySelector('.start-searching'),
 };
 
-function getIdOnClickEventImg(e) {
-  let eventTarget = e.target.parentNode;
-  let idElement = eventTarget.id;
-  console.log(idElement);
-  return idElement;
-}
+export let eventSearch = '';
+let moreEventFmAth = '';
 
 export async function onOpenModal(e) {
-  if (!e.target.closest('article')) return;
-  getIdOnClickEventImg(e);
-  // getEventByID(eventId);
+  if (!e.target.closest('.event-thumb')) return;
+  let eventTarget = e.target.parentNode;
+  let idElement = eventTarget.id;
+  let response = await getEvent(idElement);
+  let eventData = response._embedded.events[0];
 
-  refs.modalContainer.innerHTML = doModal();
+  let time = '';
+  time = eventData.dates.start.localTime.slice(0, -3);
+  const newEventData = { ...eventData, time };
+  console.log(newEventData);
+
+  refs.modalContainer.innerHTML = doModal(newEventData);
   refs.modalContainer.classList.remove('is-hidden');
-  document.body.classList.add('no-scroll');
   refs.closeModalBtn = document.querySelector('.js-modal-close-btn');
   refs.closeModalBtn.addEventListener('click', onCloseModalBtn);
+  document.addEventListener('keydown', onKeyDownEscape);
+  refs.modalContainer.addEventListener('click', closemodalContainer);
+  document.body.style = 'overflow-y: hidden;';
+  refs.modalContainer.style = 'overflow-y: visible;';
+  refs.moreFmAuthor = document.querySelector('.js-modal__more-btn');
+  refs.moreFmAuthor.addEventListener('click', onMoreFmAuthor);
+
+  return (moreEventFmAth = newEventData.name);
+}
+
+function onKeyDownEscape(e) {
+  if (e.code !== 'Escape') return;
+  onCloseModalBtn();
+}
+
+function closemodalContainer(e) {
+  if (!e.target.closest('.modal')) return;
+  onCloseModalBtn();
 }
 
 function onCloseModalBtn() {
+  document.body.style = 'overflow-y: visible;';
+  refs.moreFmAuthor.removeEventListener('click', onMoreFmAuthor);
+  refs.modalContainer.removeEventListener('click', closemodalContainer);
+  document.removeEventListener('keydown', onKeyDownEscape);
   refs.closeModalBtn.removeEventListener('click', onCloseModalBtn);
-  document.body.classList.remove('no-scroll');
+  /* document.body.classList.remove('no-scroll'); */
   refs.modalContainer.classList.add('is-hidden');
 }
 // old: refs.eventList.addEventListener('click', onOpenModal);
+
+function onMoreFmAuthor(e) {
+  if (!e.target.closest('.js-modal__more-btn')) return;
+  refs.inputSearchName.value = moreEventFmAth;
+  onCloseModalBtn();
+  eventSearch = moreEventFmAth;
+  return eventSearch;
+}
