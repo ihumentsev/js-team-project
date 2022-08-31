@@ -1,6 +1,6 @@
 import './js/makeModal';
 import preloader from './js/preloader.js';
-import dropDown from './js/choose-country-scroll.js'
+import dropDown from './js/choose-country-scroll.js';
 import getEvens from './js/getEvents';
 import temlateCards from './templates/temlateCards.hbs';
 import debounce from 'lodash.debounce';
@@ -18,7 +18,7 @@ import { onOpenModal } from './js/makeModal';
 preloader();
 
 const searchingInput = document.querySelector('.start-searching');
-const selectEl = document.querySelector('#search-country');
+const selectEl = document.querySelector('#js-dropdown-content');
 const listItemEl = document.querySelector('.event-list');
 const formEl = document.querySelector('form');
 const DEBOUNCE_DELAY = 400;
@@ -35,10 +35,10 @@ searchingInput.addEventListener(
   'input',
   debounce(onInputClick, DEBOUNCE_DELAY)
 );
-selectEl.addEventListener('change', debounce(onSelectChange, DEBOUNCE_DELAY));
+selectEl.addEventListener('click', debounce(onSelectChange, DEBOUNCE_DELAY));
 /////////////поиск по country
 function onSelectChange(event) {
-  countrySearch = event.target.value;
+  countrySearch = event.target.dataset.cod;
   renderEvents();
 }
 
@@ -101,14 +101,13 @@ async function renderEvents(page = 0) {
       totalPages =
         response.page.totalPages > 50 ? 50 : response.page.totalPages;
       renderPagination(totalPages, renderEvents);
-      }
+    }
   } catch (error) {
     console.log(error);
   }
 }
 /////////////////renderSelectCountrys
 const selectOption = createOptions(countrys);
-
 const optionList = selectOption.map(item => temlateCountry(item)).join('');
 selectEl.insertAdjacentHTML('beforeend', optionList);
 
