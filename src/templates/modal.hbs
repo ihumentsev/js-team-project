@@ -1,19 +1,47 @@
-<div class='modal__body'>
-  <button class='modal__close-btn js-modal-close-btn' type='button'></button>
+<div class='modal__body trnstn'>
+  <button class='modal__close-btn js-modal-close-btn trnstn' type='button'>
+    {{! <svg class='modal__close-btn__icon' width='27px' height='27px'>
+      <use href='./images/svg/sprite.svg#close'></use>
+    </svg> }}
+  </button>
 
   <div class='modal__img__thumb-circle'>
     <picture class='modal__img-circle'>
+
+      {{! desk }}
       <source
-        srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
-        media='(max-width: 600px)'
-        sizes='(min-width: 480px) 480px, 100vw'
+        media='(min-width: 1280px)'
+        srcset='
+            {{images.4.url}} 1x,
+            {{images.3.url}} 2x
+      '
+        type='image/jpeg'
       />
+      {{! tab }}
       <source
-        srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
-        media='(min-width: 601px)'
-        sizes='(min-width: 800px) 800px, 100vw'
+        media='(max-width: 1279px)'
+        srcset='
+            {{images.2.url}} 1x,
+            {{images.4.url}} 2x
+      '
+        type='image/jpeg'
       />
-      <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+      {{! tel }}
+      {{!-- <source
+        media='(max-width: 767px)'
+        srcset='
+            {{images.2.url}} 1x,
+            {{images.4.url}} 2x
+      '
+        type='image/jpeg'
+      /> --}}
+      <img
+        class='modal__img-circle'
+        src='{{images.2.url}}'
+        alt='{{name}}'
+        loading='lazy'
+      />
+
     </picture>
   </div>
 
@@ -21,67 +49,99 @@
 
     <div class='modal__info__img__thumb'>
       <picture class='modal__info__img'>
+        {{! desk }}
         <source
-          srcset='https://picsum.photos/id/237/400/600 400w, https://picsum.photos/id/237/800/1200 800w'
-          media='(max-width: 600px)'
-          sizes='(min-width: 480px) 480px, 100vw'
+          media='(min-width: 1280px)'
+          srcset='
+            {{images.5.url}} 1x,
+            {{images.6.url}} 2x
+      '
+          type='image/jpeg'
         />
+        {{! tab }}
         <source
-          srcset='https://picsum.photos/id/237/800/400 800w, https://picsum.photos/id/237/1600/800 1600w'
-          media='(min-width: 601px)'
-          sizes='(min-width: 800px) 800px, 100vw'
+          media='(max-width: 1279px)'
+          srcset='
+            {{images.8.url}} 1x,
+            {{images.6.url}} 2x
+      '
+          type='image/jpeg'
         />
-        <img src='https://picsum.photos/id/237/300/200' alt='Cute puppy' />
+
+        <img
+          class='modal__info__img'
+          src='{{images.0.url}}'
+          alt='{{name}}'
+          loading='lazy'
+        />
       </picture>
     </div>
 
     <ul class='modal__info__list'>
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>INFO</h2>
-        <p class='modal__info__text'>Atlas Weekend is the largest music festival
-          in Ukraine. More than 200 artists will create a proper music festival
-          atmosphere on 10 stages</p>
+        <p class='modal__info__text'>{{info}}</p>
       </li>
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>WHEN</h2>
-        <time class='modal__info__text' datetime='2021-06-09 20:00'>
-          <span class='modal__info__date'>2021-06-09</span><br />
-          <span class='modal__info__time'>20:00&nbsp;
+        <time
+          class='modal__info__text'
+          datetime='{{dates.start.localDate}} {{dates.start.localTime}}'
+        >
+          <span class='modal__info__date'>{{dates.start.localDate}}</span><br />
+          <span class='modal__info__time'>{{time}}&nbsp;
             <span
               class='modal__info__time-zone'
-            >&#8317;Kyiv&#8725;Ukraine&#8318;</span></span>
+            >({{dates.timezone}})</span></span>
         </time>
       </li>
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>WHERE</h2>
         <p class='modal__info__text'>
           <span class='modal__info__location location'>
-            <span class='location__city'>Kyiv&comma;&nbsp;Ukraine</span>
-            <span class='location__place'>VDNH</span>
+            <a
+              href='https://www.google.com/maps/place/{{_embedded.venues.0.country.name}}, {{_embedded.venues.0.city.name}}, {{_embedded.venues.0.address.line1}}'
+            ><span
+                class='location__city'
+              >{{_embedded.venues.0.city.name}}&comma;&nbsp;{{_embedded.venues.0.country.name}}</span>
+              <span
+                class='location__place'
+              >{{_embedded.venues.0.address.line1}}</span></a>
           </span>
         </p>
       </li>
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>WHO</h2>
 
-        <p class='modal__info__text'>Black and Peace</p></li>
+        <p class='modal__info__text'>{{name}}</p></li>
 
       <li class='modal__info__item'>
         <h2 class='modal__info__title'>PRICES</h2>
         <ul class='modal__info__prices prices'>
           <li class='prices__item'>
 
-            <span class='prices__item__standart'>Standart 300-500 UAH</span>
-            <button class='prices__btn' type='button'>BUY TICKETS</button>
+            <span class='prices__item__standart'>Standart
+              {{priceRanges.0.min}}
+              {{priceRanges.0.currency}}</span>
+            <button
+              class='prices__btn js-prices__btn-st trnstn'
+              type='button'
+            >BUY TICKETS</button>
           </li>
           <li class='prices__item'>
-            <span class='prices__item__vip'>VIP 1000-1500 UAH</span>
+            <span class='prices__item__vip'>VIP
+              {{priceRanges.0.max}}
+              {{priceRanges.0.currency}}</span>
 
-            <button class='prices__btn' type='button'>BUY TICKETS</button>
+            <button
+              class='prices__btn js-prices__btn-vip trnstn'
+              type='button'
+            >BUY TICKETS</button>
           </li>
         </ul>
       </li>
     </ul>
   </div>
-  <button class='modal__more-btn'>MORE FROM THIS AUTHOR</button>
+  <button class='modal__more-btn js-modal__more-btn trnstn' type='button'>MORE
+    FROM THIS AUTHOR</button>
 </div>
