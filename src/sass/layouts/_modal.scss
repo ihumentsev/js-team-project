@@ -245,3 +245,26 @@
     scale: 0;
   }
 }
+
+.prices__item__code {
+  display: block;
+  width: 24px;
+  height: 16px;
+  margin-right: 13px;
+  background-image: url(../images/svg/icon-code.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include media(desktop) {
+    width: 29px;
+    height: 20px;
+    margin-right: 16px;
+  }
+}
+
+.prices__item__standart,
+.prices__item__vip {
+  display: flex;
+  align-items: center;
+}
