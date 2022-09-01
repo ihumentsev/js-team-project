@@ -1,47 +1,12 @@
 <article class='event-card event-item'>
-  <div class='event-thumb' id='{{id}}'>
+  <div class='event-thumb' id='{{id}}'><img
+      src='{{images.9.url}}'
+      alt=''
+      class='event-card__image'
+      id='{{id}}'
+    />
+    <h3 class='event-card__title'>{{name}}</h3></div>
 
-    <picture class=''>
-
-      {{! desk }}
-      <source
-        media='(min-width: 1280px)'
-        srcset='
-            {{images.5.url}} 1x,
-            {{images.8.url}} 2x
-      '
-        type='image/jpeg'
-      />
-      {{! tab }}
-      <source
-        media='(max-width: 1279px)'
-        srcset='
-            {{images.5.url}} 1x,
-            {{images.7.url}} 2x
-      '
-        type='image/jpeg'
-      />
-      {{! tel }}
-      <source
-        media='(max-width: 767px)'
-        srcset='
-            {{images.4.url}} 1x,
-            {{images.2.url}} 2x
-      '
-        type='image/jpeg'
-      />
-      <img
-        class='event-card__image'
-        loading='lazy'
-        src='{{images.2.url}}'
-        alt='{{name}}'
-        loading='lazy'
-      />
-
-    </picture>
-    {{!-- <img src='{{images.9.url}}' alt='' class='event-card__image' id='{{id}}' /> --}}
-    <h3 class='event-card__title'>{{name}}</h3>
-  </div>
   <p class='event-card__date'>{{dates.start.localDate}}</p>
   {{#if _embedded.venues.0.name}}<a
       href='#'
