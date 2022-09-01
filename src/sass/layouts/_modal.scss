@@ -1,6 +1,7 @@
 .modal {
   display: block;
-
+  opacity: 1;
+  scale: 1;
   position: fixed;
   z-index: 29;
   top: 0;
@@ -15,9 +16,6 @@
   }
   @include media(desktop) {
     padding: 20px 123px;
-  }
-  &.is-hidden {
-    display: none;
   }
 
   background: rgba(32, 13, 29, 0.6);
@@ -35,6 +33,7 @@
     padding: 80px 24px 100px 24px;
     border-radius: 150px 0px;
     background: #fff2fd;
+
     @include media(tablet) {
       max-width: 1034px;
       padding: 32px 74px 40px 87px;
@@ -235,5 +234,14 @@
       color: #ffffff;
       background: #4c00fe;
     }
+  }
+}
+
+.is-hidden {
+  display: none;
+  opacity: 0;
+  scale: 0;
+  & .modal__body {
+    scale: 0;
   }
 }

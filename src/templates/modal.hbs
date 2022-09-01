@@ -1,5 +1,5 @@
-<div class='modal__body'>
-  <button class='modal__close-btn js-modal-close-btn' type='button'>
+<div class='modal__body trnstn'>
+  <button class='modal__close-btn js-modal-close-btn trnstn' type='button'>
     {{! <svg class='modal__close-btn__icon' width='27px' height='27px'>
       <use href='./images/svg/sprite.svg#close'></use>
     </svg> }}
@@ -123,21 +123,25 @@
             <span class='prices__item__standart'>Standart
               {{priceRanges.0.min}}
               {{priceRanges.0.currency}}</span>
-            <button class='prices__btn js-prices__btn-st' type='button'>BUY
-              TICKETS</button>
+            <button
+              class='prices__btn js-prices__btn-st trnstn'
+              type='button'
+            >BUY TICKETS</button>
           </li>
           <li class='prices__item'>
             <span class='prices__item__vip'>VIP
               {{priceRanges.0.max}}
               {{priceRanges.0.currency}}</span>
 
-            <button class='prices__btn js-prices__btn-vip' type='button'>BUY
-              TICKETS</button>
+            <button
+              class='prices__btn js-prices__btn-vip trnstn'
+              type='button'
+            >BUY TICKETS</button>
           </li>
         </ul>
       </li>
     </ul>
   </div>
-  <button class='modal__more-btn js-modal__more-btn' type='button'>MORE FROM
-    THIS AUTHOR</button>
+  <button class='modal__more-btn js-modal__more-btn trnstn' type='button'>MORE
+    FROM THIS AUTHOR</button>
 </div>

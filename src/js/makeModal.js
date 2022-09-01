@@ -20,6 +20,7 @@ let urlTicket = '';
 
 export async function onOpenModal(e) {
   if (!e.target.closest('.event-thumb')) return;
+  refs.modalContainer.classList.remove('is-hidden');
   let eventTarget = e.target.parentNode;
   let idElement = eventTarget.id;
   let response = await getEvent(idElement);
@@ -31,7 +32,7 @@ export async function onOpenModal(e) {
   console.log(newEventData);
   urlTicket = newEventData.url;
   refs.modalContainer.innerHTML = doModal(newEventData);
-  refs.modalContainer.classList.remove('is-hidden');
+
   refs.closeModalBtn = document.querySelector('.js-modal-close-btn');
   refs.closeModalBtn.addEventListener('click', onCloseModalBtn);
   document.addEventListener('keydown', onKeyDownEscape);
@@ -58,7 +59,9 @@ function closemodalContainer(e) {
 }
 
 function onCloseModalBtn() {
+  refs.modalContainer.classList.add('is-hidden');
   document.body.style = 'overflow-y: visible;';
+  refs.modalContainer.style = 'overflow-y: hidden;';
   refs.moreFmAuthor.removeEventListener('click', onMoreFmAuthor);
   refs.modalContainer.removeEventListener('click', closemodalContainer);
   document.removeEventListener('keydown', onKeyDownEscape);
@@ -66,7 +69,6 @@ function onCloseModalBtn() {
   refs.byTicktBtnStandart.removeEventListener('click', buyTickets);
   refs.byTicktBtnVip.removeEventListener('click', buyTickets);
   /* document.body.classList.remove('no-scroll'); */
-  refs.modalContainer.classList.add('is-hidden');
 }
 // old: refs.eventList.addEventListener('click', onOpenModal);
 
