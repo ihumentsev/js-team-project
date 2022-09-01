@@ -328,7 +328,9 @@ header {
 }
 
 .choose-country__input{
-  cursor: pointer
+  cursor: pointer;
+  text-align: start;
+  
 }
 .choosing-country__icon {
   right: 35px;
