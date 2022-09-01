@@ -10,10 +10,13 @@ const refs = {
   closeModalBtn: document.querySelector('.js-modal-close-btn'),
   moreFmAuthor: document.querySelector('.js-modal__more-btn'),
   inputSearchName: document.querySelector('.start-searching'),
+  byTicktBtnStandart: document.querySelector('.js-prices__btn-st'),
+  byTicktBtnVip: document.querySelector('.js-prices__btn-vip'),
 };
 
 export let eventSearch = '';
 let moreEventFmAth = '';
+let urlTicket = '';
 
 export async function onOpenModal(e) {
   if (!e.target.closest('.event-thumb')) return;
@@ -26,7 +29,7 @@ export async function onOpenModal(e) {
   time = eventData.dates.start.localTime.slice(0, -3);
   const newEventData = { ...eventData, time };
   console.log(newEventData);
-
+  urlTicket = newEventData.url;
   refs.modalContainer.innerHTML = doModal(newEventData);
   refs.modalContainer.classList.remove('is-hidden');
   refs.closeModalBtn = document.querySelector('.js-modal-close-btn');
@@ -37,7 +40,10 @@ export async function onOpenModal(e) {
   refs.modalContainer.style = 'overflow-y: visible;';
   refs.moreFmAuthor = document.querySelector('.js-modal__more-btn');
   refs.moreFmAuthor.addEventListener('click', onMoreFmAuthor);
-
+  refs.byTicktBtnStandart = document.querySelector('.js-prices__btn-st');
+  refs.byTicktBtnVip = document.querySelector('.js-prices__btn-vip');
+  refs.byTicktBtnStandart.addEventListener('click', buyTickets);
+  refs.byTicktBtnVip.addEventListener('click', buyTickets);
   return (moreEventFmAth = newEventData.name);
 }
 
@@ -57,6 +63,8 @@ function onCloseModalBtn() {
   refs.modalContainer.removeEventListener('click', closemodalContainer);
   document.removeEventListener('keydown', onKeyDownEscape);
   refs.closeModalBtn.removeEventListener('click', onCloseModalBtn);
+  refs.byTicktBtnStandart.removeEventListener('click', buyTickets);
+  refs.byTicktBtnVip.removeEventListener('click', buyTickets);
   /* document.body.classList.remove('no-scroll'); */
   refs.modalContainer.classList.add('is-hidden');
 }
@@ -68,4 +76,9 @@ function onMoreFmAuthor(e) {
   onCloseModalBtn();
   eventSearch = moreEventFmAth;
   return eventSearch;
+}
+
+function buyTickets(e) {
+  document.location.href = urlTicket;
+  onCloseModalBtn();
 }
