@@ -5,7 +5,7 @@
   "homepage": "https://ihumentsev.github.io/js-team-project/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js-team-hw/"
+    "build": "parcel build src/*.html --public-url /js-team-project/"
   },
   "repository": {
     "type": "git",
